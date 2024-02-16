@@ -1,0 +1,83 @@
+@font-face 
+    font-family: "Montserrat-sb"
+    src: url("../fonts/Montserrat-SemiBold.ttf")
+    font-weight: 600
+    font-style: normal
+    font-size: 2.4rem
+    line-height: normal
+    
+@font-face 
+    font-family: "Montserrat-m"
+    src: url("../fonts/Montserrat-Medium.ttf")
+    font-weight: 500
+    font-style: normal
+    font-size: 2.4rem
+    line-height: normal
+
+@font-face 
+    font-family: "Montserrat-r"
+    src: url("../fonts/Montserrat-Regular.ttf")
+    font-weight: 400
+    font-style: normal
+    font-size: 2.4rem
+    line-height: normal
+
+@font-face 
+    font-family: "Montserrat-l"
+    src: url("../fonts/Montserrat-Light.ttf")
+    font-weight: 300
+    font-style: normal
+    font-size: 2.4rem    
+    line-height: normal
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+    
+p
+    margin-bottom: 0
+
+html
+    font-size: 10px
+
+body
+    font-family: "Montserrat-m"
+    font-size: 2.4rem
+    background: #F8F8F8
+
+.body-wrapper
+    overflow: hidden
+    width: 100%
+    position: relative
+
+.header__wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+
+.main-section
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 100rem
+    @include respond(tab-land)
+        grid-template-rows: 70rem
+
+.section-about
+    display: grid
+    grid-template-columns: 60% 40%
+    grid-template-rows: 1fr
+    @include respond(tab-port)
+        grid-template-columns: 40% 60%
+    @include respond(phone)
+        grid-template-columns: 95%
+
+.section-about-tube
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+
+.section-priorities
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr

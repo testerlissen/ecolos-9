@@ -1,0 +1,152 @@
+.footer
+    @include respond(tab-port)
+        background: $color-black
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr
+        margin-bottom: 4rem
+        @include respond(tab-land)
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 17rem
+            margin-bottom: 0rem
+        @include respond(phone)
+            grid-template-rows: 1fr 37rem
+        &-left
+            grid-column: 1 / 2
+            grid-row: 1 / 2
+            @include respond(tab-land)
+                grid-column: 1 / 2
+                grid-row: 1 / 2
+            &__title
+                display: flex
+                font-weight: 500
+                font-size: 10vw
+                color: $color-black
+                margin-left: 3%
+                @include respond(tab-land)
+                    margin: 0
+                    justify-content: center
+                    font-size: 15vw
+                    margin-bottom: 3rem
+                @include respond(tab-port)
+                    color: white
+                    margin-top: 2rem
+                @include respond(phone)
+                    font-size: 21vw
+        &-right
+            grid-column: 2 / 3
+            grid-row: 1 / 2
+            display: flex
+            justify-content: flex-end
+            margin-right: 5%
+            @include respond(tab-land)
+                grid-column: 1 / 2
+                grid-row: 2 / 3
+                margin-right: 0
+                justify-content: space-around
+                height: 5rem
+            @include respond(phone)
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 1fr 1fr
+                margin-left: 7%
+            &__column
+                margin-top: 4.5%
+                @include respond(tab-land)
+                    margin-top: 0
+                &:not(:last-child)
+                    margin-right: 11%
+                    @include respond(tab-port)
+                        margin-right: 0
+                &__text
+                    font-family: "Montserrat-r"
+                    font-size: 1.8rem
+                    @include respond(tab-land)
+                        font-size: 1.6rem
+                    @include respond(tab-port)
+                        color: white
+                        font-size: 1.4rem
+                    @include respond(phone)
+                        font-size: 1.6rem
+                    &:not(:last-child)
+                        margin-bottom: 3.5rem
+                        @include respond(tab-land)
+                            margin-bottom: 2rem
+                        @include respond(phone)
+                            margin-bottom: 3.5rem
+                    &__url
+                        text-decoration: none
+                        color: $color-black
+                        @include respond(tab-port)
+                            color: white
+                &-1
+                    @include respond(phone)
+                        grid-row: 1 / 2
+                        grid-column: 1 / 2
+                &-2
+                    @include respond(phone)
+                        margin-top: 2rem
+                        grid-row: 2 / 3
+                        grid-column: 1 / 2
+                &-3
+                    @include respond(phone)
+                        grid-row: 1 / 2
+                        grid-column: 2 / 3
+                    &__title
+                        font-family: "Montserrat-sb"
+                        font-size: 1.8rem
+                        margin-bottom: 3.4rem
+                        @include respond(tab-land)
+                            margin-bottom: 1.7rem
+                            font-size: 1.4rem
+                        @include respond(tab-port)
+                            color: white
+                        @include respond(phone)
+                            margin-bottom: 3.2rem
+                            font-size: 1.6rem
+                    &__url
+                        text-decoration: none
+                        color: $color-black
+                        font-family: "Montserrat-r"
+                        font-size: 1.8rem
+                        @include respond(tab-land)
+                            font-size: 1.6rem
+                        @include respond(tab-port)
+                            color: white
+                            font-size: 1.4rem
+                        @include respond(phone)
+                            font-size: 1.6rem
+                    &__ul
+                        &__number
+                            margin-bottom: 2.4rem
+                            @include respond(tab-land)
+                                margin-bottom: .9rem
+                            @include respond(tab-port)
+                                color: white
+                            @include respond(phone)
+                                margin-bottom: 2.3rem
+                        &__email
+                            @include respond(tab-port)
+                                color: white
+    &__line
+        height: .1rem
+        background: $color-black
+        @include respond(tab-port)
+            background: white
+    &__other
+        display: flex
+        justify-content: center
+        &__text
+            text-decoration: none
+            color: $color-black
+            font-family: "Montserrat-r"
+            font-size: 1.4rem
+            @include respond(tab-land)
+                font-size: 1.2rem
+            @include respond(tab-port)
+                color: white
+            @include respond(phone)
+                font-size: 1rem
+            &:not(:last-child)
+                margin-right: 6.5%

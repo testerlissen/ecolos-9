@@ -1,0 +1,130 @@
+.header
+    position: fixed
+    width: 100%
+    z-index: 10
+    font-family: "Montserrat-m"
+    font-size: 1.6rem
+    background: none
+    transition: all .15s
+
+    &__wrapper
+        list-style-type: none
+        @include respond(tab-land)
+            display: none
+        &__obj
+            display: flex
+            justify-content: center
+            margin-top: 2.5rem
+            transition: all .3s
+            @include respond(tab-land)
+                margin-top: 0
+                margin-bottom: 2.5rem
+                justify-content: end
+            @include respond(phone)
+                justify-content: center
+            &-1
+                grid-column: 1 / 2
+                &:hover
+                    font-size: 1.7rem
+            &-2
+                grid-column: 2 / 3
+                &:hover
+                    font-size: 1.7rem
+            &-3
+                grid-column: 3 / 4
+                &:hover
+                    font-size: 1.7rem
+            &-4
+                grid-column: 4 / 5
+                &:hover
+                    font-size: 1.7rem
+            &-5
+                grid-column: 5 / 6
+                &:hover
+                    font-size: 1.7rem
+            &-6
+                grid-column: 6 / 7
+                &:hover
+                    font-size: 1.7rem
+            &__url
+                text-decoration: none
+                color: $color-black
+                @include respond(tab-land)
+                    color: white
+                    display: block
+    &.inverted 
+        background: rgba(210, 210, 210, 0.20)
+        backdrop-filter: blur(15px)
+        border-bottom: .2rem solid rgba(239, 239, 239, 0.3)
+        -webkit-backdrop-filter
+        height: 7rem
+        @include respond(tab-land)
+            display: none
+
+.burger-btn
+    display: none
+    position: fixed
+    width: 3rem
+    height: 2rem
+    background: none
+    border: none
+    outline: none
+    top: 4.5rem
+    right: 5.3%
+    z-index: 4
+    @include respond(tab-land)
+        display: block
+    @include respond(phone)
+        top: 3rem
+    &__line
+        @include respond(tab-land)
+            display: block
+            position: absolute
+            width: 3rem
+            height: .2rem
+            background: $color-black
+            &-1
+                transform: translateY(-1rem)
+            &-2
+            &-3
+                transform: translateY(1rem)
+        
+
+.btn-close
+    position: absolute
+    top: 4.5rem
+    right: 5rem
+    @include respond(phone)
+        top: 3rem
+        right: 3rem
+
+.offcanvas-body
+    height: 100vh
+    &__text
+        position: relative
+        display: block
+        top: 7.5rem
+        text-align: right
+        margin-right: 3.9rem
+        text-decoration: none
+        color: $color-black
+        font-size: 2.2rem
+        &:not(last-child)
+            margin-bottom: 2rem
+        @include respond(phone)
+            margin-right: 2rem
+            top: 6rem
+
+.offcanvas
+    display: none
+    @include respond(tab-land)
+        display: block
+    @include respond(phone)
+        opacity: .92
+
+.offcanvas-backdrop
+    display: none
+    @include respond(tab-land)
+        display: block
+    @include respond(phone)
+        // display: none
